@@ -32,3 +32,18 @@ td {
 	padding-left: 46.5%;
 	padding-bottom: 50px;
 }
+.table-col1{
+	width: 100px;
+	height: 226px;
+}
+.table-col2{
+	width: 500px;
+	height: 226px;
+}
+.table-col3{
+	width: 50px;
+	height: 226px;
+}
+#tabla tr{
+	border: 2px solid rgb(69, 69, 69);
+}
