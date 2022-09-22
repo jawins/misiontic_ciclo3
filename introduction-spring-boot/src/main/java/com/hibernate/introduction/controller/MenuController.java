@@ -16,7 +16,7 @@ import com.hibernate.introduction.model.Menu;
 import com.hibernate.introduction.services.MenuService;
 
 @RestController
-@RequestMapping("/Menus")
+@RequestMapping("/menus")
 public class MenuController {
 
     // Atributos
@@ -28,32 +28,32 @@ public class MenuController {
   }
 
   /** ACCIONES */
-  @CrossOrigin(origins = "http://localhost:5500")
+  @CrossOrigin(origins = "http://localhost:5501")
   @GetMapping
   public List<Menu> obtenerMenus() {
     return service.obtenerMenus();
   }
-
+  @CrossOrigin(origins = "http://localhost:5501")
   @GetMapping("/{id}")
   public Menu obtenerMenuXId(@PathVariable(name = "id") int id) {
     return service.obtenerMenuXId(id);
   }
-
+  @CrossOrigin(origins = "http://localhost:5501")
   @GetMapping("/commons")
   public List<Menu> obtenerMenusXnombreApellido(@RequestParam String nombre, @RequestParam String apellido) {
     return service.obtenerMenusXnombreApellido(nombre, apellido);
   }
-
+  @CrossOrigin(origins = "http://localhost:5501")
   @PostMapping
   public String crearMenu(@RequestBody Menu Menu) {
     return service.crearMenu(Menu);
   }
-
+  @CrossOrigin(origins = "http://localhost:5501")
   @PutMapping
   public String actualizarMenu(@RequestBody Menu Menu) {
     return service.actualizarMenu(Menu);
   }
-
+  @CrossOrigin(origins = "http://localhost:5501")
   @DeleteMapping("/{id}")
   public String eliminarMenu(@PathVariable(name = "id") int id) {
     return service.eliminarMenu(id);

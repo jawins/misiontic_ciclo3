@@ -30,7 +30,7 @@ public class UploadFileController {
     @PostMapping
     public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
        String msg="";
-       Img img;
+       String img="";
         if (file.isEmpty()) {
            // return  "Seleccionar un archivo";
            return new ResponseEntity<Object>("Seleccionar un archivo", HttpStatus.OK);
@@ -47,7 +47,7 @@ public class UploadFileController {
         }
 
        // return "subido correctamente"+ msg;
-       return new ResponseEntity<Object>("Archivo subido correctamente", HttpStatus.OK);
+       return new ResponseEntity<Object>(""+img, HttpStatus.OK);
     }
 
     /** ACCIONES */

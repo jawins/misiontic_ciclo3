@@ -30,7 +30,7 @@ async function get_users (url) {
                   <p class="card-text">${menus[i].menu}</p>
                   <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary"><a href="detalle_menu.html?id=${menus[i].id}"> View</a></button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><a href="detalle_menu.html"> View</a></button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                   </div>
                   <small class="text-muted">9 mins</small>
