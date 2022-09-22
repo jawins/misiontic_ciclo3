@@ -70,7 +70,7 @@
 		<main>
 			<section id="section-form">
 				<!--Formulario-->
-				<form>
+				<form onsubmit="get_data_form(event)">
 					<!--Nombre-->
 					<label for="input_nombre" class="form-label">Nombre*: </label>
 					<input
@@ -79,6 +79,7 @@
 						type="text"
 						placeholder="Pepito"
 						required
+						name="nombre"
 					/>
 					<!--Apellido-->
 					<label for="input_apellido" class="form-label">Apellido*: </label>
@@ -88,6 +89,7 @@
 						type="text"
 						placeholder="Perez"
 						required
+						name="apellido"
 					/>
 					<!--Email-->
 					<label for="input_email" class="form-label">Email*: </label>
@@ -97,6 +99,7 @@
 						type="email"
 						placeholder="pepito@gmail.com"
 						required
+						name="correo"
 					/>
 					<!--Fecha nacimiento-->
 					<label for="input_fecha_naci" class="form-label">
@@ -107,6 +110,7 @@
 						class="form-control"
 						type="date"
 						required
+						name="fecha_nacimiento"
 					/>
 
 					<!--Fecha nacimiento-->
@@ -118,7 +122,21 @@
 						class="form-control"
 						type="password"
 						required
+						name="clave"
 					/>
+					<!--Fecha nacimiento-->
+					<label for="Rol" class="form-label">
+						Contraseña*:
+					</label>
+					<input
+						id="rol"
+						class="form-control"
+						type="text"
+						required
+						name="rol_id"
+						value="0"  
+					/>
+					
 					
 					<!--Ejercicio: centrar el botón-->
 					<div class="container-center">
@@ -128,5 +146,6 @@
 				</form>
 			</section>
 		</main>
+		<script src="./scripts/form.js"></script>
 	</body>
 </html>

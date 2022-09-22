@@ -28,7 +28,7 @@ public class RolController {
   }
 
   /** ACCIONES */
-  @CrossOrigin(origins = "http://localhost:5500")
+  @CrossOrigin(origins = "http://localhost:5501")
   @GetMapping
   public List<Rol> obtenerRols() {
     return service.obtenerRols();

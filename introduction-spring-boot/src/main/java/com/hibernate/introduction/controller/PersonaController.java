@@ -29,7 +29,7 @@ public class PersonaController {
   }
 
   /** ACCIONES */
-  @CrossOrigin(origins = "http://localhost:5500")
+  @CrossOrigin(origins = "http://localhost:5501")
   @GetMapping
   public List<Persona> obtenerPersonas() {
     return service.obtenerPersonas();
@@ -44,7 +44,7 @@ public class PersonaController {
   public List<Persona> obtenerPersonasXnombreApellido(@RequestParam String nombre, @RequestParam String apellido) {
     return service.obtenerPersonasXnombreApellido(nombre, apellido);
   }
-
+  @CrossOrigin(origins = "http://localhost:5501")
   @PostMapping
   public String crearPersona(@RequestBody Persona persona) {
     return service.crearPersona(persona);

@@ -1,5 +1,9 @@
 package com.hibernate.introduction.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 // Indicar que la clase Persona representa una entidad de la BD
 @Entity
 // Indicar la entidad/tabla que representa la clase Persona
@@ -8,6 +12,7 @@ public class Rol {
     
     
     // ATRIBUTOS
+    @Id
      private int id;
      private String nombre;
      private boolean habilitado;
