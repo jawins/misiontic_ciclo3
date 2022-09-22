@@ -70,7 +70,7 @@
 		<main>
 			<section id="section-form">
 				<!--Formulario-->
-				<form>
+				<form onsubmit="get_data_form(event)">
 					<!--Nombre menu-->
 					<label for="input_nombre" class="form-label">Nombre Menu*: </label>
 					<input
@@ -95,7 +95,7 @@
 					<input
 						id="input_foto"
 						class="form-control"
-						type="file"
+						type="text"
 						placeholder="http://url-mi-foto.jpg"
 					/>
 
@@ -128,5 +128,6 @@
 				</form>
 			</section>
 		</main>
+		<script src="./scripts/addmenu.js"></script>
 	</body>
 </html>

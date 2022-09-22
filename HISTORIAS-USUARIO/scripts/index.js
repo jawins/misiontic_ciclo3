@@ -1,16 +1,37 @@
+function get_data_form (evt) {
+    get_data_form_(evt);
+}
+async function get_data_form_ (evt) {
+    // Indicar al evento que no recargue página
+    const url = "http://localhost:8080/menus/commons"
+      
+    evt.preventDefault()
+    const parametro="?nombre="+evt.target.search.value;
+    //alert(url+parametro)
+    if(evt.target.search.value){
+    const listmenu = await get_users(url+parametro)
+    console.table(listmenu);
+     show_users(listmenu);
+    }
+     else{
+      //alert(evt.target.search.value)
+      main();
+     }
+  }
 async function get_users (url) {
     // Enviar petición
     const resp = await fetch(url, {
       method: 'GET'
     })
     const users = await resp.json();
+    console.table(users);
     return users;
   }
   
   function show_users (menus) {
     // Referenciar tabla
     const table = document.getElementById("contenedor")
-    let tbody = "<tbody>"
+    let tbody = ""
     // Iterar users
     for (let i = 0; i < menus.length; i++) {
       //const arrayDate = menus[i].fecha_nacimiento.split("T")
@@ -31,7 +52,7 @@ async function get_users (url) {
                   <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="detalle_menu.html?id=${menus[i].id}"> View</a></button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      
                   </div>
                   <small class="text-muted">9 mins</small>
               </div>

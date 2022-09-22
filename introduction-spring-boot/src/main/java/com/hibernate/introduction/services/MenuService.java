@@ -52,16 +52,17 @@ public class MenuService {
     return Menu;
   }
 
-  public List<Menu> obtenerMenusXnombreApellido(String nombre, String apellido) {
+  public List<Menu> obtenerMenusXnombreApellido(String nombre) {
     List<Menu> Menus = new ArrayList<>();
     Session session = crearSesion();
     try {
-      Menus = session.createQuery("from Menu where nombre = :n and apellido = :a", Menu.class)
-          .setParameter("n", nombre)
-          .setParameter("a", apellido)
+      Menus = session.createQuery("from Menu where nombre like :n", Menu.class)
+          .setParameter("n","%"+nombre+"%")
           .list();
+          System.out.println("consultado");
     } catch (Exception e) {
       e.printStackTrace();
+      System.out.println(e.getMessage());
     }
     return Menus;
   }

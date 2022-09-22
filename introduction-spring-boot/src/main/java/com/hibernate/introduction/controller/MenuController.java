@@ -33,6 +33,7 @@ public class MenuController {
   public List<Menu> obtenerMenus() {
     return service.obtenerMenus();
   }
+  
   @CrossOrigin(origins = "http://localhost:5501")
   @GetMapping("/{id}")
   public Menu obtenerMenuXId(@PathVariable(name = "id") int id) {
@@ -40,8 +41,8 @@ public class MenuController {
   }
   @CrossOrigin(origins = "http://localhost:5501")
   @GetMapping("/commons")
-  public List<Menu> obtenerMenusXnombreApellido(@RequestParam String nombre, @RequestParam String apellido) {
-    return service.obtenerMenusXnombreApellido(nombre, apellido);
+  public List<Menu> obtenerMenusXnombreApellido(@RequestParam String nombre) {
+    return service.obtenerMenusXnombreApellido(nombre);
   }
   @CrossOrigin(origins = "http://localhost:5501")
   @PostMapping
