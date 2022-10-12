@@ -13,6 +13,7 @@ async function get_users (url) {
   
   function show_users (menu) {
     // Referenciar tabla
+    const titulo = document.getElementById("titulo")
     const img = document.getElementById("img")
     const nombre = document.getElementById("nombre")
     const categorias = document.getElementById("categorias")
@@ -22,6 +23,7 @@ async function get_users (url) {
     //img.src=menu.foto;
     img.setAttribute("href",menu.foto);
     nombre.innerText=menu.nombre;
+    titulo.innerText=menu.nombre;
    descripcion.innerText=menu.menu;
    calificacionup.innerText=pcalificaion(menu.calificacionup,menu.calificaciondown);
    calificaciondown.innerText=pcalificaion(menu.calificaciondown,menu.calificacionup);
