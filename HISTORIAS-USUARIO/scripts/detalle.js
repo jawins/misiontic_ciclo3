@@ -25,11 +25,11 @@ async function get_users (url) {
     let url;
     if(evt.target.up)
     {
-      url="http://localhost:8080/menus/1/1";
+      url="http://localhost:8080/menus/"+UPDATE_FLAG.id +"/1";
     }
     if(evt.target.down)
     {
-      url="http://localhost:8080/menus/1/2";
+      url="http://localhost:8080/menus/"+UPDATE_FLAG.id +"/2";
     }
     put_calificacion(url);
     main()
@@ -62,7 +62,8 @@ console.table(menu)
   { let valor=0;
 
     valor=Math.trunc((a/(a+b))*100);
-    return valor;
+
+    return a;
   }
   
   async function main () {

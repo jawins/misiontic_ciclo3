@@ -72,42 +72,46 @@
 				<!--Formulario-->
 				<form onsubmit="get_data_form(event)">
 					<!--Nombre menu-->
-					<label for="input_nombre" class="form-label">Nombre Menu*: </label>
+					<label for="nombre" class="form-label">Nombre Menu*: </label>
 					<input
-						id="input_nombre"
+						id="nombre"
 						class="form-control"
 						type="text"
 						placeholder="Menu"
+						name="nombre"
 						required
 					/>
 					<!--Apellido-->
-					<label for="input_apellido" class="form-label">Categoria*: </label>
+					<label for="categoria" class="form-label">Categoria*: </label>
 					<input
-						id="input_apellido"
+						id="categoria"
 						class="form-control"
 						type="text"
-						placeholder="Categoria"
+						placeholder="categoria"
+						name="categoria"
 						required
 					/>
 
                     <!--Foto-->
-					<label for="input_foto" class="form-label">Foto: </label>
+					<label for="oto" class="form-label">Foto: </label>
 					<input
-						id="input_foto"
+						id="foto"
 						class="form-control"
 						type="text"
+						name="foto"
 						placeholder="http://url-mi-foto.jpg"
 					/>
 
 
 					<!--Descripcion-->
-					<label for="input_email" class="form-label">Descripcion*: </label>
+					<label for="descripcion" class="form-label">Descripcion*: </label>
 					
                     <textarea 
                         name="" 
-                        id="input_email"
+                        id="descripcion"
                         class="form-control"
-                        placeholder="pepito@gmail.com"
+                        placeholder=""
+						name="descripcion"
                         cols="30" 
                         rows="10">
 
@@ -128,6 +132,6 @@
 				</form>
 			</section>
 		</main>
-		<script src="./scripts/addmenu.js"></script>
+		<script src="scripts/addmenu.js"></script>
 	</body>
 </html>
