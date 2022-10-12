@@ -54,6 +54,13 @@ public class MenuController {
   public String actualizarMenu(@RequestBody Menu Menu) {
     return service.actualizarMenu(Menu);
   }
+
+  @CrossOrigin(origins = "http://localhost:5501")
+  @PutMapping("/{id}/{op}")
+  public Menu obtenerCalificacion(@PathVariable(name = "id") int id,@PathVariable(name = "op") int op) {
+    return service.obtenerCalificacion(id,op);
+  }
+
   @CrossOrigin(origins = "http://localhost:5501")
   @DeleteMapping("/{id}")
   public String eliminarMenu(@PathVariable(name = "id") int id) {

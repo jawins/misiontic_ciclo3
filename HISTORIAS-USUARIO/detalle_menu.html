@@ -99,8 +99,12 @@
 						
                         <div class="d-flex justify-content-between align-items-center">
 						  <div class="btn-group">
-							<button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up"></i><span id="cup"></span>%</button>
-							<button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-down"></i><span id="cdown"></span>%</button>
+							<form class="d-flex" onsubmit="get_data_form(event)" >
+							<button type="submit" id="up" name="up" class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up"></i><span id="cup"></span>%</button>
+							</form>
+							<form class="d-flex" id="down" name="down" onsubmit="get_data_form(event)" >
+							<button type="submit" class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-down"></i><span id="cdown"></span>%</button>
+							</form>
 						  </div>
 						  <small class="text-muted">{Calificaion}</small>
                           <small class="text-muted">9 mins</small>

@@ -67,6 +67,21 @@ public class MenuService {
     return Menus;
   }
 
+  public Menu obtenerCalificacion(int id,int op) {
+    Menu menu =null;
+    menu = obtenerMenuXId(id);
+    if(op==1){
+        menu.setCalificacionup(menu.getCalificacionup()+1);
+        actualizarMenu(menu);
+    }
+    if(op==2){
+      menu.setCalificaciondown(menu.getCalificaciondown()+1);
+      actualizarMenu(menu);
+    }
+    menu = obtenerMenuXId(id);
+    return menu;
+  }
+
   public String crearMenu(Menu Menu) {
     String message = "";
     Session session = crearSesion();

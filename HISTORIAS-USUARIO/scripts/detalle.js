@@ -10,7 +10,30 @@ async function get_users (url) {
     const users = await resp.json();
     return users;
   }
-  
+
+  async function put_calificacion (url) {
+    // Enviar petición
+    const resp = await fetch(url, {
+      method: 'PUT'
+    })
+    const users = await resp.json();
+    return users;
+  }
+  function get_data_form (evt) {
+    // Indicar al evento que no recargue página
+    evt.preventDefault()
+    let url;
+    if(evt.target.up)
+    {
+      url="http://localhost:8080/menus/1/1";
+    }
+    if(evt.target.down)
+    {
+      url="http://localhost:8080/menus/1/2";
+    }
+    put_calificacion(url);
+    main()
+  }
   function show_users (menu) {
     // Referenciar tabla
     const titulo = document.getElementById("titulo")

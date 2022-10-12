@@ -17,7 +17,7 @@ import com.hibernate.introduction.model.Favoritos;
 import com.hibernate.introduction.services.FavoritosService;
 
 @RestController
-@RequestMapping("/Favoritoss")
+@RequestMapping("/favoritos")
 public class FavoritosController {
 
      // Atributos
